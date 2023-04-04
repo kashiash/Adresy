@@ -32,19 +32,20 @@
     <DetailView Id="Customer_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="12.818261633011414">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.34503950834065">
             <LayoutGroup Id="Customer" RelativeSize="100">
-              <LayoutItem Id="Name" RelativeSize="35.61643835616438" />
-              <LayoutItem Id="VATID" RelativeSize="30.136986301369863" />
-              <LayoutGroup Id="Autoc118897b-55a0-4660-98f0-fd15ed4047e4" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="34.24657534246575" IsNewNode="True">
-                <LayoutItem Id="MainAddress" ViewItem="MainAddress" Index="0" RelativeSize="49.96572995202193" IsNewNode="True" />
-                <LayoutItem Id="MailingAddress" ViewItem="MailingAddress" Index="1" RelativeSize="50.03427004797807" IsNewNode="True" />
+              <LayoutItem Id="Name" RelativeSize="34.21052631578947" />
+              <LayoutItem Id="VATID" RelativeSize="28.94736842105263" />
+              <LayoutGroup Id="Autoc118897b-55a0-4660-98f0-fd15ed4047e4" ShowCaption="False" Caption="Autoc118897b-55a0-4660-98f0-fd15ed4047e4(6)" Direction="Horizontal" Index="2" RelativeSize="36.8421052631579" IsNewNode="True">
+                <LayoutItem Id="MainAddress" ViewItem="MainAddress" Index="0" RelativeSize="49.8971898560658" IsNewNode="True" />
+                <LayoutItem Id="MailingAddress" ViewItem="MailingAddress" Index="1" RelativeSize="50.1028101439342" IsNewNode="True" />
               </LayoutGroup>
               <LayoutItem Id="MailingAddress" RelativeSize="26.31578947368421" Removed="True" />
               <LayoutItem Id="MainAddress" RelativeSize="23.157894736842106" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <TabbedGroup Id="Item3" CaptionLocation="Top" Index="1" RelativeSize="87.18173836698858" IsNewNode="True">
+          <LayoutItem Id="Item2" Index="1" RelativeSize="7.9016681299385425" IsNewNode="True" />
+          <TabbedGroup Id="Item3" CaptionLocation="Top" Index="2" RelativeSize="78.75329236172081" IsNewNode="True">
             <LayoutGroup Id="Addresses_Group" ShowCaption="True" Caption="Addresses" Index="0" RelativeSize="100" IsNewNode="True">
               <LayoutItem Id="Addresses" ViewItem="Addresses" Index="0" RelativeSize="100" IsNewNode="True" />
             </LayoutGroup>
