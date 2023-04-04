@@ -12,6 +12,22 @@
     <SchemaModule Name="SystemModule" Version="23.1.1.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="Address_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Address" RelativeSize="100">
+              <LayoutItem Id="Street" Index="0" RelativeSize="4.565408252853381" />
+              <LayoutItem Id="City" Index="1" RelativeSize="3.8630377524143986" />
+              <LayoutItem Id="Country" Index="2" RelativeSize="91.57155399473223" />
+              <LayoutItem Id="StateProvince" Index="2" RelativeSize="45.30289727831431" Removed="True" />
+              <LayoutItem Id="ZipPostal" Index="3" RelativeSize="87.70851624231783" Removed="True" />
+              <LayoutItem Id="FullAddress" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
     <DetailView Id="Customer_DetailView">
       <Layout>
