@@ -16,21 +16,21 @@ class Program
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         
         // Specify the input and output file paths.
-        string inputFile = "c:\\WymianaEurorent\\gabos.csv";
+        string inputFile  = "c:\\WymianaEurorent\\gabos.csv";
         string outputFile = "c:\\WymianaEurorent\\gabos_utf8.csv";
 
         // Read the contents of the input file using the Windows-1252 encoding.
-        //string content;
-        //using (StreamReader reader = new StreamReader(inputFile, Encoding.GetEncoding(1250)))
-        //{
-        //    content = reader.ReadToEnd();
-        //}
+        string content;
+        using (StreamReader reader = new StreamReader(inputFile, Encoding.GetEncoding(1250)))
+        {
+            content = reader.ReadToEnd();
+        }
 
-        //// Write the contents to the output file using UTF-8 encoding.
-        //using (StreamWriter writer = new StreamWriter(outputFile, false, new UTF8Encoding(false)))
-        //{
-        //    writer.Write(content);
-        //}
+        // Write the contents to the output file using UTF-8 encoding.
+        using (StreamWriter writer = new StreamWriter(outputFile, false, new UTF8Encoding(false)))
+        {
+            writer.Write(content);
+        }
 
         //Console.WriteLine("Conversion complete.");
 

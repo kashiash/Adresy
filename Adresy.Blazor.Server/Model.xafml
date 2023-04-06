@@ -9,6 +9,11 @@
       </Item>
     </Items>
   </NavigationItems>
-  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
-  </Views>
+  <Options DataAccessMode="Server" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.1.1.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.1.1.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.1.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
 </Application>
