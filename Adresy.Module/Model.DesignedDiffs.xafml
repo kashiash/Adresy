@@ -62,5 +62,6 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Kody_ListView" AllowEdit="True" />
   </Views>
 </Application>

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adresy.Blazor.Server", "Adr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adresy.E2E.Tests", "Adresy.E2E.Tests\Adresy.E2E.Tests.csproj", "{F69C4B3D-1328-431F-8860-2CCCA2525CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportKodyGabos", "ImportKodyGabos\ImportKodyGabos.csproj", "{65BC47BF-B2FF-4094-AF60-69307D8A45E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,8 +44,17 @@ Global
 		{F69C4B3D-1328-431F-8860-2CCCA2525CFB}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{F69C4B3D-1328-431F-8860-2CCCA2525CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F69C4B3D-1328-431F-8860-2CCCA2525CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22D9DDAE-258C-4B7D-970C-57E164520E57}
 	EndGlobalSection
 EndGlobal
