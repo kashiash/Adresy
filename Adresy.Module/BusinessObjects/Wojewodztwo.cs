@@ -29,7 +29,7 @@ namespace Adresy.Module.BusinessObjects
             set => SetPropertyValue(nameof(NazwaWojewodztwa), ref nazwaWojewodztwa, value);
         }
 
-        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        [Size(4)]
         public string KodTerc
         {
             get => kodTerc;

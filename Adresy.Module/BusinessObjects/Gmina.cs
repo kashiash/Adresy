@@ -11,22 +11,23 @@ using System.Threading.Tasks;
 namespace Adresy.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [XafDefaultProperty(nameof(NazwaPowiatu))]
-    public class Powiat : BaseObject
+    [XafDisplayName(nameof(NazwaGminy))]
+    public class Gmina : BaseObject
     {
-        public Powiat(Session session) : base(session)
+        public Gmina(Session session) : base(session)
         { }
 
 
-        Wojewodztwo wojewodztwo;
+        Powiat powiat;
+        string kodRodz;
         string kodTerc;
-        string nazwaPowiatu;
+        string nazwaGminy;
 
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
-        public string NazwaPowiatu
+        public string NazwaGminy
         {
-            get => nazwaPowiatu;
-            set => SetPropertyValue(nameof(NazwaPowiatu), ref nazwaPowiatu, value);
+            get => nazwaGminy;
+            set => SetPropertyValue(nameof(NazwaGminy), ref nazwaGminy, value);
         }
 
 
@@ -36,21 +37,20 @@ namespace Adresy.Module.BusinessObjects
             get => kodTerc;
             set => SetPropertyValue(nameof(KodTerc), ref kodTerc, value);
         }
-        [Association("Wojewodztwo-Powiaty")]
 
-        public Wojewodztwo Wojewodztwo
+        [Size(2)]
+        public string KodRodz
         {
-            get => wojewodztwo;
-            set => SetPropertyValue(nameof(Wojewodztwo), ref wojewodztwo, value);
+            get => kodRodz;
+            set => SetPropertyValue(nameof(KodRodz), ref kodRodz, value);
         }
 
+        
         [Association("Powiat-Gminy")]
-        public XPCollection<Gmina> Gminy
+        public Powiat Powiat
         {
-            get
-            {
-                return GetCollection<Gmina>(nameof(Gminy));
-            }
+            get => powiat;
+            set => SetPropertyValue(nameof(Powiat), ref powiat, value);
         }
     }
 }

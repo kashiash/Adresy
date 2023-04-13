@@ -15,6 +15,7 @@ namespace Adresy.Module.Controllers
 {
     public class KodyListViewController : ViewController<ListView>
     {
+        SimpleAction dopiszGminyAction;
         SimpleAction dopiszPowiatyAction;
         SimpleAction dopiszWojewodztwaAction;
         public KodyListViewController() : base()
@@ -28,8 +29,33 @@ namespace Adresy.Module.Controllers
 
             dopiszPowiatyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszPowiatyAction)}", PredefinedCategory.Unspecified);
             dopiszPowiatyAction.Execute += dopiszPowiatyAction_Execute;
+
+
+            dopiszGminyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszGminyAction)}",PredefinedCategory.Unspecified);
+            dopiszGminyAction.Execute += dopiszGminyAction_Execute;
             
 
+        }
+        private void dopiszGminyAction_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            var kody = ObjectSpace.GetObjectsQuery<Kody>().GroupBy(k => new { k.Gmina,k.GminaGUS,k.KodTERCgmi,k.KodTERCgmiRodz, k.Powiat});
+
+            foreach (var item in kody)
+            {
+                var gmina = ObjectSpace.GetObjectsQuery<Gmina>(true).Where(w => w.NazwaGminy == item.Key.Gmina && w.Powiat.NazwaPowiatu == item.Key.Powiat).FirstOrDefault();
+                if (gmina == null)
+                {
+                    var powiat = ObjectSpace.GetObjectsQuery<Powiat>(true).Where(w => w.NazwaPowiatu == item.Key.Powiat).FirstOrDefault();
+
+                    gmina = ObjectSpace.CreateObject<Gmina>();
+                    gmina.NazwaGminy = item.Key.Gmina;
+                    gmina.KodTerc = item.Key.KodTERCgmi;
+                    gmina.KodRodz= item.Key.KodTERCgmiRodz;
+                    gmina.Powiat = powiat;
+                    gmina.Save();
+                }
+            }
+            ObjectSpace.CommitChanges();
         }
         private void dopiszPowiatyAction_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
