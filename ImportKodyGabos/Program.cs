@@ -88,6 +88,13 @@ class Program
         }
         unitOfWork.CommitChanges();
 
+        Console.WriteLine("Conversion complete.");
+        Console.ReadLine();
+
+
+        // create class for address data
+        
+
     }
 
     static List<CsvRow> ReadCsv(string filePath)

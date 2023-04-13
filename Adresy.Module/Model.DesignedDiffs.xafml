@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Adresy">
   <BOModel>
+    <Class Name="Adresy.Module.BusinessObjects.Kody" DefaultListViewAllowEdit="True" />
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
   <Options DataAccessMode="Server">
@@ -32,20 +33,24 @@
     <DetailView Id="Customer_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="13.34503950834065">
-            <LayoutGroup Id="Customer" RelativeSize="100">
-              <LayoutItem Id="Name" RelativeSize="34.21052631578947" />
-              <LayoutItem Id="VATID" RelativeSize="28.94736842105263" />
-              <LayoutGroup Id="Autoc118897b-55a0-4660-98f0-fd15ed4047e4" ShowCaption="False" Caption="Autoc118897b-55a0-4660-98f0-fd15ed4047e4(6)" Direction="Horizontal" Index="2" RelativeSize="36.8421052631579" IsNewNode="True">
-                <LayoutItem Id="MainAddress" ViewItem="MainAddress" Index="0" RelativeSize="49.8971898560658" IsNewNode="True" />
-                <LayoutItem Id="MailingAddress" ViewItem="MailingAddress" Index="1" RelativeSize="50.1028101439342" IsNewNode="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="18.13426329555362">
+            <LayoutGroup Id="Customer" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Customer_col1" RelativeSize="100">
+                <LayoutItem Id="Name" RelativeSize="35.13513513513514" />
+                <LayoutItem Id="Group" RelativeSize="29.72972972972973" />
+                <LayoutItem Id="VATID" RelativeSize="35.13513513513514" />
               </LayoutGroup>
-              <LayoutItem Id="MailingAddress" RelativeSize="26.31578947368421" Removed="True" />
-              <LayoutItem Id="MainAddress" RelativeSize="23.157894736842106" Removed="True" />
+              <LayoutGroup Id="Customer_col2" RelativeSize="67.88935658448587" Caption="Customer_col2" Removed="True">
+                <LayoutItem Id="MailingAddress" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="MainAddress" RelativeSize="35.13513513513514" Removed="True" />
+              </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutItem Id="Item2" Index="1" RelativeSize="7.9016681299385425" IsNewNode="True" />
-          <TabbedGroup Id="Item3" CaptionLocation="Top" Index="2" RelativeSize="78.75329236172081" IsNewNode="True">
+          <LayoutGroup Id="Auto98d7b552-eca3-4170-a993-d3f75cc28422" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="3.8360941586748036" IsNewNode="True">
+            <LayoutItem Id="MainAddress1" ViewItem="MainAddress" Index="0" RelativeSize="49.97036158861885" IsNewNode="True" />
+            <LayoutItem Id="MailingAddress1" ViewItem="MailingAddress" Index="1" RelativeSize="50.02963841138115" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Item3" CaptionLocation="Top" Index="2" RelativeSize="78.02964254577158" IsNewNode="True">
             <LayoutGroup Id="Addresses_Group" ShowCaption="True" Caption="Addresses" Index="0" RelativeSize="100" IsNewNode="True">
               <LayoutItem Id="Addresses" ViewItem="Addresses" Index="0" RelativeSize="100" IsNewNode="True" />
             </LayoutGroup>
@@ -62,6 +67,13 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="CustomerGroup_Customers_ListView">
+      <Columns>
+        <ColumnInfo Id="MainAddress_Copy" PropertyName="MainAddress.Street" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="MailingAddress_Copy" PropertyName="MailingAddress.Street" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Notes" Index="9" />
+      </Columns>
+    </ListView>
     <ListView Id="Kody_ListView" AllowEdit="True" />
   </Views>
 </Application>

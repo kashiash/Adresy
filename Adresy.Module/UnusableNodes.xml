@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Customer">
+              <LayoutItem Id="Name" RelativeSize="34.21052631578947" />
+              <LayoutItem Id="VATID" RelativeSize="28.94736842105263" />
+              <LayoutItem Id="MailingAddress" RelativeSize="26.31578947368421" Removed="True" />
+              <LayoutItem Id="MainAddress" RelativeSize="23.157894736842106" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

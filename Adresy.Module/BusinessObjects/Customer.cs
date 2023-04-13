@@ -26,6 +26,7 @@ namespace Adresy.Module.BusinessObjects
     {
         public Customer(Session session) : base(session) { }
 
+        CustomerGroup group;
         Address mailAddress;
         Address mainAddress;
         private string _name;
@@ -34,6 +35,15 @@ namespace Adresy.Module.BusinessObjects
         {
             get { return _name; }
             set { SetPropertyValue(nameof(Name), ref _name, value); }
+        }
+
+        public string Street => MainAddress?.Street;
+
+        [Association("CustomerGroup-Customers")]
+        public CustomerGroup Group
+        {
+            get => group;
+            set => SetPropertyValue(nameof(Group), ref group, value);
         }
 
         private string _vatId;

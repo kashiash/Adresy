@@ -42,6 +42,8 @@ namespace Adresy.Module.BusinessObjects
             set => SetPropertyValue(nameof(Street), ref street, value);
         }
 
+        Powiat powiat;
+        Wojewodztwo wojewodztwo;
         string country;
         string city;
         string street;
@@ -58,7 +60,22 @@ namespace Adresy.Module.BusinessObjects
             set => SetPropertyValue(nameof(City), ref city, value);
         }
 
+
+
+        public Wojewodztwo Wojewodztwo
+        {
+            get => wojewodztwo;
+            set => SetPropertyValue(nameof(Wojewodztwo), ref wojewodztwo, value);
+        }
+
         
+        public Powiat Powiat
+        {
+            get => powiat;
+            set => SetPropertyValue(nameof(Powiat), ref powiat, value);
+        }
+
+
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
         public string Country
         {
