@@ -52,5 +52,14 @@ namespace Adresy.Module.BusinessObjects
             get => powiat;
             set => SetPropertyValue(nameof(Powiat), ref powiat, value);
         }
+
+        [Association("Ulice-Gmina")]
+        public XPCollection<Ulica> Ulice
+        {
+            get
+            {
+                return GetCollection<Ulica>(nameof(Ulice));
+            }
+        }
     }
 }

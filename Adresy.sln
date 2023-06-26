@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adresy.Blazor.Server", "Adr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adresy.E2E.Tests", "Adresy.E2E.Tests\Adresy.E2E.Tests.csproj", "{F69C4B3D-1328-431F-8860-2CCCA2525CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportKodyGabos", "ImportKodyGabos\ImportKodyGabos.csproj", "{65BC47BF-B2FF-4094-AF60-69307D8A45E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportKodyGabos", "ImportKodyGabos\ImportKodyGabos.csproj", "{65BC47BF-B2FF-4094-AF60-69307D8A45E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportULIC", "ImportULIC\ImportULIC.csproj", "{1FED6184-0BA5-49E9-A97C-9CB500D667C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,12 @@ Global
 		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
 		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65BC47BF-B2FF-4094-AF60-69307D8A45E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FED6184-0BA5-49E9-A97C-9CB500D667C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

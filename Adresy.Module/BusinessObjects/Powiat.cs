@@ -52,5 +52,14 @@ namespace Adresy.Module.BusinessObjects
                 return GetCollection<Gmina>(nameof(Gminy));
             }
         }
+
+        [Association("Ulice-Powiat")]
+        public XPCollection<Ulica> Ulice
+        {
+            get
+            {
+                return GetCollection<Ulica>(nameof(Ulice));
+            }
+        }
     }
 }

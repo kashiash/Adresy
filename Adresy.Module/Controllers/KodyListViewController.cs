@@ -16,6 +16,7 @@ namespace Adresy.Module.Controllers
 {
     public class KodyListViewController : ViewController<ListView>
     {
+        SimpleAction dopiszUliceAction;
         SimpleAction dopiszGminyAction;
         SimpleAction dopiszPowiatyAction;
         SimpleAction dopiszWojewodztwaAction;
@@ -45,12 +46,24 @@ namespace Adresy.Module.Controllers
             dopiszGminyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszGminyAction)}", PredefinedCategory.Unspecified)
             {
                 Caption = "Dopisz gminy",
-               // ImageName = "BO_Skull",
+                // ImageName = "BO_Skull",
                 PaintStyle = ActionItemPaintStyle.CaptionAndImage
             };
             dopiszGminyAction.Execute += dopiszGminyAction_Execute;
+
+            dopiszUliceAction = new SimpleAction(this, $"{GetType().FullName}-{nameof(dopiszUliceAction)}", PredefinedCategory.Unspecified)
+            {
+                Caption = "Dopisz ulice",
+                PaintStyle= ActionItemPaintStyle.CaptionAndImage
+            };
+            dopiszUliceAction.Execute += dopiszUliceAction_Execute;
             
 
+
+        }
+        private void dopiszUliceAction_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            // Execute your business logic (https://docs.devexpress.com/eXpressAppFramework/112737/).
         }
         private void dopiszGminyAction_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
