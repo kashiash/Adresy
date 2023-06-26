@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Adresy.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [XafDisplayName(nameof(NazwaGminy))]
+    [XafDefaultProperty(nameof(NazwaGminy))]
     public class Gmina : BaseObject
     {
         public Gmina(Session session) : base(session)

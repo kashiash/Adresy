@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Reference Include="DevExpress.Xpo.v23.1">
-      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.xpo\23.1.2-pre-23080\lib\netstandard2.0\DevExpress.Xpo.v23.1.dll</HintPath>
+      
     </Reference>
   </ItemGroup>
 

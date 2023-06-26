@@ -2,6 +2,7 @@
 using DevExpress.Data.ODataLinq.Helpers;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
+using DevExpress.ExpressApp.Templates;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
@@ -24,14 +25,29 @@ namespace Adresy.Module.Controllers
             TargetObjectType = typeof(Kody);
 
 
-            dopiszWojewodztwaAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszWojewodztwaAction)}", PredefinedCategory.Unspecified);
+            dopiszWojewodztwaAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszWojewodztwaAction)}", PredefinedCategory.Unspecified)
+            {
+                Caption = "Dopisz województwa",
+                //ImageName = "BO_Skull",
+                PaintStyle = ActionItemPaintStyle.CaptionAndImage
+            };
             dopiszWojewodztwaAction.Execute += dopiszWojewodztwaAction_Execute;
 
-            dopiszPowiatyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszPowiatyAction)}", PredefinedCategory.Unspecified);
+            dopiszPowiatyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszPowiatyAction)}", PredefinedCategory.Unspecified)
+            {
+                Caption = "Dopisz powiaty",
+                //ImageName = "BO_Skull",
+                PaintStyle = ActionItemPaintStyle.CaptionAndImage
+            };
             dopiszPowiatyAction.Execute += dopiszPowiatyAction_Execute;
 
 
-            dopiszGminyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszGminyAction)}",PredefinedCategory.Unspecified);
+            dopiszGminyAction = new SimpleAction(this, $"{GetType().FullName}{nameof(dopiszGminyAction)}", PredefinedCategory.Unspecified)
+            {
+                Caption = "Dopisz gminy",
+               // ImageName = "BO_Skull",
+                PaintStyle = ActionItemPaintStyle.CaptionAndImage
+            };
             dopiszGminyAction.Execute += dopiszGminyAction_Execute;
             
 
